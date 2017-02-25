@@ -18,7 +18,7 @@ import java.io.IOException;
  */
 
 
-// a new servlet
+// a new servlet here
 @WebServlet("/logout")
 public class LogoutServlet extends HttpServlet {
 
