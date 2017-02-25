@@ -2,6 +2,8 @@ package org.fasttrackit.dev.todolist.servlet;
 
 
 
+import org.fasttrackit.dev.todolist.Util;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -53,6 +55,7 @@ public class LoginServlet extends HttpServlet {
 
         int iduser=-1;
 
+        passwd = Util.hash(passwd);
         iduser=userAccess.checkUserCredentials(user, passwd);
         if(iduser!=-1) {
             System.out.println(user + "0000");
